@@ -27,5 +27,5 @@ Route::get('/message/real/{id}', 'Index\Message@real');
 Route::get('/message/fake/{id}', 'Index\Message@fake');
 
 Route::get('/reset', 'Index\Index@reset');
-
 Route::get('/data', 'Index\Index@data');
+Route::get('/about', 'Index\Index@about');

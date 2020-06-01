@@ -85,4 +85,11 @@ class Index extends Controller
         ]);
     }
 
+    /**
+     * 关于本站
+     */
+    public function about()
+    {
+       return view('home.index.about');
+    }
 }
