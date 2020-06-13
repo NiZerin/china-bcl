@@ -20,6 +20,7 @@ use App\Model\CompanyModel;
 use Exception;
 
 /**
+ * 爆料
  * Class Message
  *
  * @package App\Http\Controllers\Index

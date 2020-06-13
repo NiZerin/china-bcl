@@ -20,6 +20,7 @@ use App\Model\ProvinceModel;
 use Exception;
 
 /**
+ * 公司
  * Class Company
  *
  * @package App\Http\Controllers\Index
@@ -57,7 +58,7 @@ class Company extends Controller
     }
 
     /**
-     *
+     * 新增公司页面
      */
     public function add()
     {
@@ -67,6 +68,7 @@ class Company extends Controller
     }
 
     /**
+     * 新增公司保存
      * @return array
      */
     public function save()
