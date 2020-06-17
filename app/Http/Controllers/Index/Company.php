@@ -74,6 +74,7 @@ class Company extends Controller
     public function save()
     {
         $data = html_charset();
+        $data['from_ip'] = request()->ip();
 
         try {
             CompanyModel ::query() -> create($data);

@@ -16,6 +16,6 @@ namespace App\Model;
 
 class BlackMsgModel extends BaseModel
 {
-    protected $fillable = ['company_id','content'];
+    protected $fillable = ['company_id', 'content', 'from_ip'];
     protected $table = 'bcl_black_msg';
 }

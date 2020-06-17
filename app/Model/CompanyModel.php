@@ -14,9 +14,8 @@
 namespace App\Model;
 
 
-
 class CompanyModel extends BaseModel
 {
-    protected $fillable = ['province_id','name', 'address', 'legal'];
+    protected $fillable = ['province_id', 'name', 'address', 'legal', 'from_ip'];
     protected $table = 'bcl_company';
 }

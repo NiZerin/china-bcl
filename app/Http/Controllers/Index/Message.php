@@ -64,6 +64,7 @@ class Message extends Controller
     public function save(int $id)
     {
         $data = html_charset();
+        $data['from_ip'] = request()->ip();
 
         try {
             BlackMsgModel ::query() -> create($data);
