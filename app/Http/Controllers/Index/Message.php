@@ -37,6 +37,7 @@ class Message extends Controller
     {
         $messages = BlackMsgModel ::query()
             -> where('company_id', $id)
+            -> orderByDesc('id')
             -> get();
 
         return view('home.message.list', [

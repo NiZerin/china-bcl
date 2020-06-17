@@ -21,8 +21,7 @@ Route::middleware('throttle:30')->group(function () {
     Route::get('/company/{id}/message', 'Index\Message@list');
 
     Route::get('/message/{id}', 'Index\Message@add');
-    Route::get('/message/real/{id}', 'Index\Message@real');
-    Route::get('/message/fake/{id}', 'Index\Message@fake');
+
 
     Route::get('/reset', 'Index\Index@reset');
     Route::get('/data', 'Index\Index@data');
@@ -30,7 +29,12 @@ Route::middleware('throttle:30')->group(function () {
 });
 
 
-Route::middleware('throttle:5')->group(function () {
+Route::middleware('throttle:10')->group(function () {
     Route::post('/company', 'Index\Company@save');
     Route::post('/message/{id}', 'Index\Message@save');
+});
+
+Route::middleware('throttle:10')->group(function () {
+    Route::get('/message/real/{id}', 'Index\Message@real');
+    Route::get('/message/fake/{id}', 'Index\Message@fake');
 });
