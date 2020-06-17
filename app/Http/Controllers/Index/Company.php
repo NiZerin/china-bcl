@@ -73,8 +73,10 @@ class Company extends Controller
      */
     public function save()
     {
+        $data = html_charset();
+
         try {
-            CompanyModel ::query() -> create(request() -> post());
+            CompanyModel ::query() -> create($data);
 
             return ['code' => 0, 'data' => [], 'msg' => 'success'];
         } catch (Exception $exception) {

@@ -63,8 +63,10 @@ class Message extends Controller
      */
     public function save(int $id)
     {
+        $data = html_charset();
+
         try {
-            BlackMsgModel ::query() -> create(request() -> post());
+            BlackMsgModel ::query() -> create($data);
             CompanyModel ::query() -> where('id', $id) -> increment('black_nums');
 
             return ['code' => 0, 'data' => [], 'msg' => 'success'];
