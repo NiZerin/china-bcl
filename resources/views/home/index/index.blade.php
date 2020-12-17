@@ -16,7 +16,7 @@
                 <a href="javascript:;">其他操作</a>
                 <dl class="layui-nav-child">
                     <dd><a href="javascript:;" onclick="addCompany()">新增公司</a></dd>
-                    <dd><a href="javascript:;" onclick="reset()">清除负面</a></dd>
+{{--                    <dd><a href="javascript:;" onclick="reset()">清除负面</a></dd>--}}
                     <dd><a href="javascript:;" onclick="about()">关于本站</a></dd>
                 </dl>
             </li>
