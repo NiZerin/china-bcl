@@ -1,6 +1,8 @@
 /node_modules
 /public/hot
 /public/storage
+/public/.well-known
+/public/.user.ini
 /storage/*.key
 /vendor
 .env
@@ -12,3 +14,4 @@ npm-debug.log
 yarn-error.log
 .idea
 composer.lock
+
