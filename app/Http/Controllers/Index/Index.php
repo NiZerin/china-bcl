@@ -20,6 +20,7 @@ use App\Model\CompanyModel;
 use App\Model\ProvinceModel;
 
 /**
+ * 主页
  * Class Index
  *
  * @package App\Http\Controllers\Index

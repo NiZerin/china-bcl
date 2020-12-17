@@ -20,6 +20,7 @@ use App\Model\CompanyModel;
 use Exception;
 
 /**
+ * 爆料
  * Class Message
  *
  * @package App\Http\Controllers\Index
@@ -36,6 +37,7 @@ class Message extends Controller
     {
         $messages = BlackMsgModel ::query()
             -> where('company_id', $id)
+            -> orderByDesc('id')
             -> get();
 
         return view('home.message.list', [
@@ -62,8 +64,11 @@ class Message extends Controller
      */
     public function save(int $id)
     {
+        $data = html_charset();
+        $data['from_ip'] = request()->ip();
+
         try {
-            BlackMsgModel ::query() -> create(request() -> post());
+            BlackMsgModel ::query() -> create($data);
             CompanyModel ::query() -> where('id', $id) -> increment('black_nums');
 
             return ['code' => 0, 'data' => [], 'msg' => 'success'];
