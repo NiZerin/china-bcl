@@ -25,7 +25,7 @@
             <li class="layui-nav-item">
             </li>
             <li class="layui-nav-item">
-                <a href="https://github.com/NiZerin" target="_blank">Github</a>
+                <a href="https://github.com/NiZerin/china-bcl" target="_blank">Github</a>
             </li>
         </ul>
     </div>
